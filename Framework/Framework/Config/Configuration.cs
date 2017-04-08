@@ -35,7 +35,8 @@ namespace Framework.Config
         /// <returns>full solution path</returns>
         public static string SolutionPath => Uri.UnescapeDataString(new DirectoryInfo(new Uri(Assembly.GetCallingAssembly().GetName().CodeBase).AbsolutePath).Parent.Parent.Parent.Parent.FullName);
 
-        public static string CurrentBrowserName => Config.AppSettings.Settings["browser.current"].Value;
+        //public static string CurrentBrowserName => Config.AppSettings.Settings["browser.current"].Value;
+        public static string CurrentBrowserName => "chrome";
 
         public static string ChromeBinPath => $"{SolutionPath}/{DriversPaths.ChromeDriver}";
         public static string FirefoxBinPath => $"{SolutionPath}/{DriversPaths.FirefoxDriver}";

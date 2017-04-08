@@ -9,3 +9,7 @@ D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\r
 D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\obj\Debug\NUnitTests.csprojResolveAssemblyReference.cache
 D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\obj\Debug\NUnitTests.dll
 D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\obj\Debug\NUnitTests.pdb
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\Framework.dll
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\nunit.framework.dll
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\Framework.pdb
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\nunit.framework.xml
