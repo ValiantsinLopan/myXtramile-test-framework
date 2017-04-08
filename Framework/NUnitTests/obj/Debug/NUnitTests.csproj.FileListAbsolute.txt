@@ -1,0 +1,11 @@
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\NUnitTests.dll
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\NUnitTests.pdb
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\WebDriver.dll
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\WebDriver.Support.dll
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\WebDriver.xml
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\WebDriver.Support.xml
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\obj\Debug\NUnitTests.csprojResolveAssemblyReference.cache
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\obj\Debug\NUnitTests.dll
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\NUnitTests\obj\Debug\NUnitTests.pdb
