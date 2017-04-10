@@ -12,14 +12,14 @@ namespace NUnitTests.Tests
     [TestFixture]
     public class LoginTests : BaseTest
     {
-        private LoginPage _loginPage = new LoginPage();
+        private LoginPage loginPage = new LoginPage();
 
         [Test]
         public void NegativeLoginTest()
         {
-            _loginPage.NavigateHere();
-            _loginPage.LoginMyXtramile("wsdfdw","tgerdwrfg");
-            Assert.IsFalse(_loginPage.IsLoginFailedMessageDisplayed());
+            loginPage.NavigateHere();
+            loginPage.LoginMyXtramile("wsdfdw","tgerdwrfg");
+            Assert.IsTrue(loginPage.IsLoginFailedMessageDisplayed());
         }
 
     }

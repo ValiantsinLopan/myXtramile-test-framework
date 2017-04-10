@@ -13,8 +13,8 @@ namespace Framework.Config
     {
         private const string ConfigFilePath = "Framework/app.config";
 
-        private static System.Configuration.Configuration _config;
-        private static System.Configuration.Configuration Config => _config ?? (_config = LoadConfig());
+        private static System.Configuration.Configuration config;
+        private static System.Configuration.Configuration Config => config ?? (config = LoadConfig());
 
         /// <summary>
         /// Loads configuration from file
@@ -35,14 +35,15 @@ namespace Framework.Config
         /// <returns>full solution path</returns>
         public static string SolutionPath => Uri.UnescapeDataString(new DirectoryInfo(new Uri(Assembly.GetCallingAssembly().GetName().CodeBase).AbsolutePath).Parent.Parent.Parent.Parent.FullName);
 
-        //public static string CurrentBrowserName => Config.AppSettings.Settings["browser.current"].Value;
-        public static string CurrentBrowserName => "chrome";
+        public static string CurrentBrowserName => Config.AppSettings.Settings["browser.current"].Value;
+        public static TimeSpan DefaultDriverWaitSeconds => TimeSpan.FromSeconds(double.Parse(Config.AppSettings.Settings["browser.wait.time.seconds"].Value));
 
         public static string ChromeBinPath => $"{SolutionPath}/{DriversPaths.ChromeDriver}";
         public static string FirefoxBinPath => $"{SolutionPath}/{DriversPaths.FirefoxDriver}";
         public static string EdgeBinPath => $"{SolutionPath}/{DriversPaths.EdgeDriver}";
         public static string IeBinPath => $"{SolutionPath}/{DriversPaths.IEDriver}";
 
+       
         /// <summary>
         /// Loads all specified capabilities from config file
         /// </summary>

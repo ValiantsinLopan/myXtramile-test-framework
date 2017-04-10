@@ -9,6 +9,8 @@ using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Support.UI;
+
 namespace Framework.WebDriver
 {
     public static class DriverFactory
@@ -23,6 +25,9 @@ namespace Framework.WebDriver
         private static string CurrentTest => TestContext.CurrentContext.Test.ClassName;
 
         public static void CleanupDriver() { Driver.Quit(); }
+
+        public static WebDriverWait Wait(TimeSpan time) => new WebDriverWait(Driver, time);
+        public static WebDriverWait Wait() => new WebDriverWait(Driver, Configuration.DefaultDriverWaitSeconds);
 
         public static IWebDriver Driver
         {
@@ -39,8 +44,7 @@ namespace Framework.WebDriver
         public static void InitDriver()
         {
             DriversDictionary.TryAdd(CurrentTest, GetDriverInstance());
-            Driver.Manage().Window.Maximize();
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+            Driver.Manage().Timeouts().ImplicitWait = Configuration.DefaultDriverWaitSeconds;
         }
 
         /// <summary>
@@ -78,31 +82,46 @@ namespace Framework.WebDriver
 
         private static IWebDriver GetChromeDriver()
         {
-            return new ChromeDriver(Configuration.ChromeBinPath);
+            var options = new ChromeOptions();
+            options.AddArgument("start-maximized");
+            return new ChromeDriver(Configuration.ChromeBinPath, options);
         }
 
         private static IWebDriver GetFirefoxDriver()
         {
+            var options = new FirefoxOptions
+            {
+                UseLegacyImplementation = true
+            };
+
             var service = FirefoxDriverService.CreateDefaultService(Configuration.FirefoxBinPath);
-            return new FirefoxDriver(service);
+            var driver = new FirefoxDriver(service);
+            driver.Manage().Window.Maximize();
+            return driver;
         }
 
         private static IWebDriver GetEdgeDriver()
         {
             var service = EdgeDriverService.CreateDefaultService(Configuration.EdgeBinPath);
-            return new EdgeDriver(service);
+            var driver = new EdgeDriver(service);
+            driver.Manage().Window.Maximize();
+            return driver;
         }
 
         private static IWebDriver GetIeDriver()
         {
             var service = InternetExplorerDriverService.CreateDefaultService(Configuration.IeBinPath);
-            return new InternetExplorerDriver(service);
+            var driver = new InternetExplorerDriver(service);
+            driver.Manage().Window.Maximize();
+            return driver;
         }
 
         private static IWebDriver GetRemoteDriver()
         {
             var capabilities = Configuration.LoadBrowserStackCapabilities();
-            return new RemoteWebDriver(new Uri(BrowserStack.URL), capabilities);
+            var driver = new RemoteWebDriver(new Uri(BrowserStack.URL), capabilities);
+            driver.Manage().Window.Maximize();
+            return driver;
         }
     }
 }
