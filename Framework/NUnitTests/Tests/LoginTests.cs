@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using Framework.BusinessObjects;
 using Framework.UI.Pages;
+using NUnitTests.DataSources;
 
 namespace NUnitTests.Tests
 {
@@ -14,11 +16,11 @@ namespace NUnitTests.Tests
     {
         private LoginPage loginPage = new LoginPage();
 
-        [Test]
-        public void NegativeLoginTest()
+        [Test, TestCaseSource(typeof(UsersDataSources), nameof(UsersDataSources.TestCaseWithUsers))]
+        public void NegativeLoginTest(string email, string password)
         {
             loginPage.NavigateHere();
-            loginPage.LoginMyXtramile("wsdfdw","tgerdwrfg");
+            loginPage.LoginMyXtramile(email,password);
             Assert.IsTrue(loginPage.IsLoginFailedMessageDisplayed());
         }
 
