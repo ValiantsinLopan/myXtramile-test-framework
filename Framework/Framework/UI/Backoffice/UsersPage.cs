@@ -16,5 +16,9 @@ namespace Framework.UI.Backoffice
         {
             FilterInput.SendKeys(email);
         }
+        public bool IsUserFound(string email)
+        {
+            return DriverFactory.Driver.FindElement(By.XPath($"//div[@class='datatable-scroll']//td[text()='{email}']")).Displayed;
+        }
     }
 }
