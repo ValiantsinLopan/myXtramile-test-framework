@@ -83,6 +83,9 @@
     <Compile Include="UI\Backoffice\MainPage.cs" />
     <Compile Include="UI\Backoffice\UsersPage.cs" />
     <Compile Include="UI\Pages\LoginPage.cs" />
+    <Compile Include="UI\Pages\MainPage.cs" />
+    <Compile Include="UI\Pages\MyAccountPage.cs" />
+    <Compile Include="UI\Pages\PaymentInformationForm.cs" />
     <Compile Include="WebDriver\DriverFactory.cs" />
   </ItemGroup>
   <ItemGroup>
