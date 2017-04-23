@@ -12,5 +12,18 @@ namespace Framework.UI.Pages
     {
         private IWebElement UserDropdown => DriverFactory.Driver.FindElement(By.XPath("//li[@class='dropdown dropdown-user']/a"));
         private IWebElement AccountSettings => DriverFactory.Driver.FindElement(By.XPath("//ul[@class='dropdown-menu dropdown-menu-right']//a[@href='/myaccount/company']"));
+
+        public void SwitchToAppMainPage()
+        {
+            List<string> tabs = new List<string>(DriverFactory.Driver.WindowHandles);
+            DriverFactory.Driver.SwitchTo().Window(tabs[1]);
+        }
+
+        public void GoToAccountSettingsPage()
+        {
+            UserDropdown.Click();
+            AccountSettings.Click();
+        }
+        
     }
 }

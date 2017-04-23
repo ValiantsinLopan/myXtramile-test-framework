@@ -10,5 +10,11 @@ namespace Framework.UI.Pages
 {
     public class PaymentInformationForm
     {
+        private const string PaymentInformationID = "shopifyModal";
+
+        public void SwitchToPaymentInformationIFrame()
+        {
+            DriverFactory.Driver.SwitchTo().Frame(PaymentInformationID);
+        }
     }
 }
