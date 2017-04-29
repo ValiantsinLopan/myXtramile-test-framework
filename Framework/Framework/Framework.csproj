@@ -79,13 +79,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TestDataPaths.resx</DependentUpon>
     </Compile>
+    <Compile Include="Steps\RegistrationSteps.cs" />
+    <Compile Include="Steps\SubscriptionSteps.cs" />
     <Compile Include="UI\Backoffice\LoginBackofficePage.cs" />
     <Compile Include="UI\Backoffice\MainPage.cs" />
     <Compile Include="UI\Backoffice\UsersPage.cs" />
+    <Compile Include="UI\Mailinator\InboxPage.cs" />
+    <Compile Include="UI\Mailinator\LetterPage.cs" />
+    <Compile Include="UI\Mailinator\MainPage.cs" />
     <Compile Include="UI\Pages\LoginPage.cs" />
     <Compile Include="UI\Pages\MainPage.cs" />
     <Compile Include="UI\Pages\MyAccountPage.cs" />
     <Compile Include="UI\Pages\PaymentInformationForm.cs" />
+    <Compile Include="UI\Pages\XtramileSASPage.cs" />
     <Compile Include="WebDriver\DriverFactory.cs" />
   </ItemGroup>
   <ItemGroup>

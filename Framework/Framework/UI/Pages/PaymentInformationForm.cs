@@ -18,7 +18,8 @@ namespace Framework.UI.Pages
         private IWebElement CityInput => DriverFactory.Driver.FindElement(By.XPath("//div[@data-address-field='city']//input"));
         private IWebElement ZipCodeInput => DriverFactory.Driver.FindElement(By.XPath("//div[@data-address-field='zip']//input"));
         private IWebElement ContinueButton => DriverFactory.Driver.FindElement(By.XPath("//div[@class='step__footer']//button"));
-
+        private IWebElement BankDepositCheckbox => DriverFactory.Driver.FindElement(By.XPath("//div[@data-gateway-group='manual']"));
+        private IWebElement PlaceMyOrderButton => DriverFactory.Driver.FindElement(By.XPath("//button[@class='step__footer__continue-btn btn']"));
         public void SwitchToPaymentInformationIFrame()
         {
             DriverFactory.Driver.SwitchTo().Frame(PaymentInformationID);
@@ -33,6 +34,10 @@ namespace Framework.UI.Pages
             ZipCodeInput.SendKeys(zipcode);
             ContinueButton.Click();
         }
-
+        public void ChooseBankDepositPayment()
+        {
+            BankDepositCheckbox.Click();
+            PlaceMyOrderButton.Click();
+        }
     }
 }
