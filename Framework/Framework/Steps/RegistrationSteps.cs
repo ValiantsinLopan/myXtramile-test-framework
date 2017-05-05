@@ -22,8 +22,8 @@ namespace Framework.Steps
             registrationPage.NavigateForRegistration();
             registrationPage.RegisterUser(name, email, password, company);
             
-            mainPage.SwitchToAppMainPage();
-            mainPage.GoToAccountSettingsPage();
+            //mainPage.SwitchToAppMainPage();
+            //mainPage.GoToAccountSettingsPage();
         }
         public bool CheckIsCreateUser(string email, string login, string password)
         {

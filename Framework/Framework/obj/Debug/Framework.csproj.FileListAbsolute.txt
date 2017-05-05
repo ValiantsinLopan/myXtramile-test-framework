@@ -15,3 +15,4 @@ D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\Framework\obj\Debug\Fr
 D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\Framework\bin\Debug\Castle.Core.dll
 D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\Framework\bin\Debug\Castle.Core.xml
 D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\Framework\bin\Debug\Framework.dll.config
+D:\VALIANTSIN\Project\myXtramile-test-framework\Framework\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache

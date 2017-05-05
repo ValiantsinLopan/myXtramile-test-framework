@@ -10,7 +10,7 @@ namespace Framework.UI.Backoffice
 {
     public class UsersPage
     {
-        private IWebElement FilterInput => DriverFactory.Driver.FindElement(By.XPath("input[@aria-controls='DataTables_Table_1']"));
+        private IWebElement FilterInput => DriverFactory.Driver.FindElement(By.XPath("//input[@aria-controls='DataTables_Table_0']"));
 
         public void SearchByEmail(string email)
         {

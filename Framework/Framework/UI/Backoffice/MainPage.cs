@@ -10,7 +10,7 @@ namespace Framework.UI.Backoffice
 {
     public class MainPage
     {
-        private IWebElement UsersItem => DriverFactory.Driver.FindElement(By.XPath("//a[@href='#/users/index']"));
+        private IWebElement UsersItem => DriverFactory.Driver.FindElement(By.XPath("//a[@id='ember476']"));
         public void GoToUserList()
         {
             UsersItem.Click();

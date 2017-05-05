@@ -69,6 +69,7 @@
     <Compile Include="DataSources\UsersDataSources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\LoginTests.cs" />
+    <Compile Include="Tests\RegistrationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
