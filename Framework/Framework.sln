@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestsData", "TestsData", "{BF141194-5FC8-4E16-96E2-ECFB55F852CE}"
 	ProjectSection(SolutionItems) = preProject
 		Users.xml = Users.xml
+		UsersForRegistration.xml = UsersForRegistration.xml
 	EndProjectSection
 EndProject
 Global

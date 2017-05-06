@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using Framework.Steps;
+using NUnitTests.DataSources;
 
 namespace NUnitTests.Tests
 {
@@ -13,11 +14,11 @@ namespace NUnitTests.Tests
     {
         private RegistrationSteps steps = new RegistrationSteps();
 
-        [Test]
-        public void Registration()
+        [Test, TestCaseSource(typeof(UsersDataSources), nameof(UsersDataSources.TestCaseForRegistration))]
+        public void Registration(string email, string password, string companyName, string name)
         {
-            steps.RegisterNewUser("lopan","lopanauto@mailinator.com","qwerty","testing");
-            Assert.IsTrue(steps.CheckIsCreateUser("lopanauto@mailinator.com", "admin@admin.com", "123456"));
+            steps.RegisterNewUser(name,email,password,name);
+            Assert.IsTrue(steps.CheckIsCreateUser(email, "admin@admin.com", "123456"));
         }
 
     }
