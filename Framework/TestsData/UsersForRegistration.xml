@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AllUsers>
+  <user>
+    <email>automation.test@mailinator.com</email>
+    <password>123456</password>
+    <companyName>TestCompanyAuto</companyName>
+    <name>Lopan</name>
+  </user>
+</AllUsers>
