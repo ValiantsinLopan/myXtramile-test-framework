@@ -12,7 +12,8 @@ namespace Framework.UI.Pages
     {
         private IWebElement UserDropdown => DriverFactory.Driver.FindElement(By.XPath("//li[@class='dropdown dropdown-user']/a"));
         private IWebElement AccountSettings => DriverFactory.Driver.FindElement(By.XPath("//ul[@class='dropdown-menu dropdown-menu-right']//a[@href='/myaccount/company']"));
-
+        private IWebElement AddJobButton => DriverFactory.Driver.FindElement(By.XPath("//a[@class='fab-menu-btn btn bg-pink-300 btn-float btn-rounded btn-icon legitRipple']"));
+        private IWebElement NewJobButton => DriverFactory.Driver.FindElement(By.XPath("//button[@class='btn btn-default btn-rounded btn-icon btn-float legitRipple']"));
         public void SwitchToAppMainPage()
         {
             List<string> tabs = new List<string>(DriverFactory.Driver.WindowHandles);
@@ -25,5 +26,10 @@ namespace Framework.UI.Pages
             AccountSettings.Click();
         }
         
+        public void AddNewJob()
+        {
+            AddJobButton.Click();
+            NewJobButton.Click();
+        }
     }
 }

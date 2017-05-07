@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessObjects\AllUsers.cs" />
+    <Compile Include="BusinessObjects\Job.cs" />
     <Compile Include="BusinessObjects\User.cs" />
     <Compile Include="Config\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="UI\Mailinator\InboxPage.cs" />
     <Compile Include="UI\Mailinator\LetterPage.cs" />
     <Compile Include="UI\Mailinator\MainPage.cs" />
+    <Compile Include="UI\Pages\CreateJobPage.cs" />
     <Compile Include="UI\Pages\LoginPage.cs" />
     <Compile Include="UI\Pages\MainPage.cs" />
     <Compile Include="UI\Pages\MyAccountPage.cs" />
