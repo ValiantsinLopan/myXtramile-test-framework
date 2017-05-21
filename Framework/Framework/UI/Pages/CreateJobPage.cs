@@ -70,15 +70,5 @@ namespace Framework.UI.Pages
             firstImage.Click();
             SaveMediaButton.Click();
         }
-
-
-
-
-
-
-
-
     }
 }
-
-

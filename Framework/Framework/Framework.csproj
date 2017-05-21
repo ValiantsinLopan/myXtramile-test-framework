@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="BusinessObjects\AllUsers.cs" />
     <Compile Include="BusinessObjects\Job.cs" />
+    <Compile Include="BusinessObjects\Jobs.cs" />
     <Compile Include="BusinessObjects\User.cs" />
     <Compile Include="Config\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +81,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TestDataPaths.resx</DependentUpon>
     </Compile>
+    <Compile Include="Steps\CreateJobSteps.cs" />
     <Compile Include="Steps\RegistrationSteps.cs" />
     <Compile Include="Steps\SubscriptionSteps.cs" />
     <Compile Include="UI\Backoffice\LoginBackofficePage.cs" />
