@@ -8,6 +8,8 @@ using OpenQA.Selenium.Interactions;
 
 
 using Framework.WebDriver;
+using System.Threading;
+using OpenQA.Selenium.Support.UI;
 
 namespace Framework.UI.Pages
 {
@@ -32,6 +34,9 @@ namespace Framework.UI.Pages
 
         public void FillFirstForm(string title, string type, string country, string category)
         {
+            Thread.Sleep(3000);
+            //var wait = new WebDriverWait(DriverFactory.Driver, TimeSpan.FromSeconds(10));
+            //wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.XPath("//input[@name='jobTitle']")));
             JobTitle.SendKeys(title);
             JobType.Click();
             DriverFactory.Driver.FindElement(By.XPath($"//li[text()='{type}']")).Click();

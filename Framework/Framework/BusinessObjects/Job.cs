@@ -7,7 +7,6 @@ using System.Xml.Serialization;
 
 namespace Framework.BusinessObjects
 {
-    [Serializable]
     public class Job
     {
         [XmlElement("title")]
@@ -16,18 +15,18 @@ namespace Framework.BusinessObjects
         public string Type { get; set; }
         [XmlElement("country")]
         public string Country { get; set; }
-        [XmlElement("keywords")]
-        public string Keywords { get; set; }
+        //[XmlElement("keywords")]
+        //public string Keywords { get; set; }
         [XmlElement("category")]
         public string Category { get; set; }
         [XmlElement("description")]
         public string Description { get; set; }
-        [XmlElement("videoUrl")]
-        public string VideoUrl { get; set; }
+        //[XmlElement("videoUrl")]
+        //public string VideoUrl { get; set; }
         [XmlElement("budget")]
-        public decimal Budget { get; set; }
-        [XmlElement("startDate")]
-        public string StartDate { get; set; }
+        public string Budget { get; set; }
+        //[XmlElement("startDate")]
+        //public string StartDate { get; set; }
         [XmlElement("briefDescription")]
         public string BriefDescription { get; set; }
         [XmlElement("mediaType")]
@@ -36,7 +35,7 @@ namespace Framework.BusinessObjects
         {
 
         }
-        public Job(string title, string type, string country, string category, string description, decimal budget, string startdate, string briefdescription, string mediatype)
+        public Job(string title, string type, string country, string category, string description, string budget, string startdate, string briefdescription, string mediatype)
         {
             Title = title;
             Type = type;
@@ -44,7 +43,6 @@ namespace Framework.BusinessObjects
             Category = category;
             Description = description;
             Budget = budget;
-            StartDate = startdate;
             BriefDescription = briefdescription;
             MediaType = mediatype;
         }

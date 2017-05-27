@@ -62,7 +62,7 @@
   <ItemGroup>
     <Compile Include="BusinessObjects\AllUsers.cs" />
     <Compile Include="BusinessObjects\Job.cs" />
-    <Compile Include="BusinessObjects\Jobs.cs" />
+    <Compile Include="BusinessObjects\AllJobs.cs" />
     <Compile Include="BusinessObjects\User.cs" />
     <Compile Include="Config\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +84,7 @@
     <Compile Include="Steps\CreateJobSteps.cs" />
     <Compile Include="Steps\RegistrationSteps.cs" />
     <Compile Include="Steps\SubscriptionSteps.cs" />
+    <Compile Include="Tools\NameGenerator.cs" />
     <Compile Include="UI\Backoffice\LoginBackofficePage.cs" />
     <Compile Include="UI\Backoffice\MainPage.cs" />
     <Compile Include="UI\Backoffice\UsersPage.cs" />

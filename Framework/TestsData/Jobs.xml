@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AllJobs>
+  <job>
+    <title>Test job</title>
+    <type>Full-time</type>
+    <country>Germany</country>
+    <category>agriculture</category>
+    <description>Test Description</description>
+    <budget>1000</budget>
+    <brriefDescription>Test brief description</brriefDescription>
+    <mediaType>agriculture</mediaType>
+  </job>
+</AllJobs>

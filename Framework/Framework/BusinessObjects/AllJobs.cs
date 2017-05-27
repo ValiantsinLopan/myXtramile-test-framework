@@ -6,15 +6,15 @@ using System.Xml.Serialization;
 namespace Framework.BusinessObjects
 {
     [Serializable]
-    public class Jobs
+    public class AllJobs
     {
         [XmlElement("job")]
         public List<Job> jobs { get; set; }
 
-        public static Jobs DeserialiseUsers(string filePath)
+        public static AllJobs DeserialiseJobs(string filePath)
         {
-            var jobSerialiser = new XmlSerializer(typeof(Jobs));
-            return (Jobs)jobSerialiser.Deserialize(new XmlTextReader(filePath));
+            var jobSerialiser = new XmlSerializer(typeof(AllJobs));
+            return (AllJobs)jobSerialiser.Deserialize(new XmlTextReader(filePath));
         }
     }
 }
